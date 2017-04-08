@@ -26,6 +26,7 @@ public class AdapterListView extends BaseAdapter{
     private Context context;
 
     public AdapterListView(Context context){
+        /*
         Contact c1 = new Contact();
         c1.setNama("Fitra");
         c1.setNoHp("0856");
@@ -45,8 +46,17 @@ public class AdapterListView extends BaseAdapter{
         contacts.add(c3);
 
         contactsSearch.addAll(contacts);
-
+        */
         this.context = context;
+    }
+
+    public void refresh(List<Contact> contacts){
+        this.contacts.clear();
+        this.contactsSearch.clear();
+
+        this.contacts.addAll(contacts);
+        this.contactsSearch.addAll(contacts);
+        notifyDataSetChanged();
     }
 
     public void search(String query){
