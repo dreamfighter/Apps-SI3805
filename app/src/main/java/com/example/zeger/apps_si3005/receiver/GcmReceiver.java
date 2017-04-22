@@ -26,8 +26,7 @@ public class GcmReceiver extends WakefulBroadcastReceiver{
 
                 .setContentTitle(intent.getExtras().getString("userId"))
                 .setContentText(intent.getExtras().getString("message"))
-                .setAutoCancel(true)
-                .setStyle(new NotificationCompat.BigTextStyle().bigText("Andi Lala (34), tersangka utama pembunuhan sadis satu keluarga di Medan, ditangkap di Indrigiri Hilir, Riau. Meski sudah dikepung, ia sempat melawan."));
+                .setAutoCancel(true);
 
         NotificationManager notificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
